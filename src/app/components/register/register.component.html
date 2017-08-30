@@ -1,0 +1,413 @@
+<style type="text/css">
+    #x {
+        background-color: #4B819F;
+        height: 1800px;
+        width:1349px;
+        background: radial-gradient(white,#4B819F);
+    }
+
+    .image {
+        position: relative;
+        width: 85%;
+        top: 70px;
+        left:140px;
+      
+    }
+ #two{
+     position: relative;
+      background-color: #FF6000;
+      width:77.8%;
+      height:40px;
+      top:70px;
+      left:140px;
+    
+  }
+    .container {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+    }
+
+    #save {
+        margin-left: 400px
+    }
+
+    #menu-bar-container-1 {
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 63px;
+    }
+    #one{
+        background-color:#AAB7B8;
+        width:89% ;
+        height:43px;
+    }
+  #unity{
+      position: relative;
+      top:10px;
+    
+  }
+
+
+    #menu-bar-container {
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 100px;
+    }
+ 
+    .clear {
+        clear: both;
+    }
+
+    #menu-bar {
+        width: 1000px;
+        margin: 0 auto;
+        height: 30px;
+    }
+
+    #menu-bar a {
+        color: black;
+        text-decoration: none;
+        padding: 0 10px;
+        border-right: 1px solid #BB4545;
+        font-size: 13px;
+        position: relative;
+        top: 16px;
+    }
+
+    #menu-bar a:hover {
+        text-decoration: underline;
+    }
+
+    #fdic {
+        color: black;
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        top: 23px;
+    }
+
+    #norton {
+        position: relative;
+        top: -30px;
+        float: right;
+        left: -50px;
+    }
+
+    #contact {
+        color: black;
+
+        position: relative;
+        float: right;
+        left: -330px;
+        top: 20px;
+    }
+
+    #fd {
+        position: relative;
+        top: -30px;
+        float: right;
+        left: -95px;
+    }
+
+    #fb {
+        position: relative;
+        top: -7px;
+        float: right;
+        left: -300px;
+    }
+
+    #insta {
+        position: relative;
+        top: -7px;
+        float: right;
+        left: -230px;
+    }
+
+    #link {
+        position: relative;
+        top: -7px;
+        float: right;
+        left: -160px;
+    }
+
+    #twitter {
+        position: relative;
+        top: -7px;
+        float: right;
+        left: -90px;
+    }
+
+    #youtube {
+        position: relative;
+        top: -7px;
+        float: right;
+        left: -20px;
+    }
+    h4{
+        padding:4px;
+        margin:0;
+        color:white;
+    }
+</style>
+
+
+<div id="menu-bar-container-1">
+    <div id="unity">
+       <a href=""> <img src="https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-logo.png" height="40px" width="105px">
+       </a> </div>
+</div>
+<div id="x">
+    <div id="two"><h4>Bank Account Application</h4></div>
+    <div class="image">
+        <img src="http://www.wallmaya.com/wp-content/uploads/2016/05/white-color-wallpaper-high-resolution.png" width="1050px" height="1630px">
+        <div class="container">
+            <h3>
+                
+                 <u>   <font color="orange">1 Personal Info</font></u>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>2 Opening Deposit</u>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                <u>3 Account settings</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <u>4 Discloures</u>
+            </h3>
+            <br>
+            <p>Welcome</p>
+            <p>To get started, please tell us about yourself. Be assured, Banana keeps your information private and secure.</p>
+            
+            <p>All fields are mandatory unless marked as optional.</p>
+        
+            <div id="one"> <font size="5">&nbsp;&nbsp;&nbsp;Basic Information</font></div><br>
+            <form (submit)="getForm1($event)">
+                <div class="form-group row">
+                    <label for="firstname" class="col-2 col-form-label"><h5>First Name:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="firstname" [(ngModel)]="data.firstname" name="data.firstname" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="middlename" class="col-2 col-form-label"><h5>Middle Name:</h5>(optional)</label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="middlename" [(ngModel)]="data.middlename" name="data.middlename">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label for="lastname" class="col-2 col-form-label"><h5>Last Name:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="lastname" [(ngModel)]="data.lastname" name="data.lastname" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+
+                    <label for="suffix" class="col-2 col-form-label"><h5>Suffix:</h5>(optional)</label>
+
+                    <div class="col-2">
+
+                        <select id="suffix" class="form-control" [(ngModel)]="data.suffix" name="data.suffix">
+  <option selected>Please Select</option>
+  <option value="jr">Jr.</option>
+  <option value="sr">Sr.</option>
+  <option value="II">II</option>
+  <option value="III">III</option>
+  <option value="IV">IV</option>
+  <option value="V">V</option>
+</select>
+                    </div>
+                </div>
+                <hr class="m-y-2">
+                <div class="form-group row ">
+                    <label for="Address Line 1" class="col-2 col-form-label"><h5>Address Line 1:</h5></label>
+                    <div class="col-4">
+                        <input class="form-control" type="text" id="addressline1" placeholder="P.O.Boxes are not acceptable" [(ngModel)]="data.addressline1"
+                            name="data.addressline1" required>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label for="Address Line 2" class="col-2 col-form-label"><h5>Address Line 2:</h5>(optional)</label>
+                    <div class="col-4">
+                        <input class="form-control" type="text" id="addressline2" placeholder="Apartment/suite(e.g.,11G)" [(ngModel)]="data.addressline2"
+                            name="data.addressline2">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="city" class="col-2 col-form-label"><h5>City:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="city" [(ngModel)]="data.city" name="data.city" required>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+
+                    <label for="state" class="col-2 col-form-label"><h5>State:</h5></label>
+
+                    <div class="col-2">
+
+                        <select id="state" class="form-control" [(ngModel)]="data.state" name="data.state" required>
+  <option selected>Please Select</option>
+  <option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+</select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="zipcode" class="col-2 col-form-label"><h5>Zipcode:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="zipcode" [(ngModel)]="data.zipcode" name="data.zipcode" required maxlength="5">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="phonenumber" class="col-2 col-form-label"><h5>Phone Number:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="phonenumber" placeholder="xxx-xxx-xxxx" [(ngModel)]="data.phonenumber" name="data.phonenumber"
+                            required maxlength="10">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-2 col-form-label"><h5>Email:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="email" id="email" [(ngModel)]="data.email" name="data.email" required>
+                    </div>
+                </div>
+               <div id="one"> <font size="5">&nbsp;&nbsp;&nbsp;Security Information</font></div><br>
+                <div class="form-group row">
+                    <label for="ssn" class="col-2 col-form-label"><h5>SSN or Taxpayer ID number:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="ssn" placeholder="xxx-xx-xxxx" [(ngModel)]="data.ssn" name="data.ssn" required  maxlength="9">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dob" class="col-2 col-form-label"><h5>Date of Birth:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="date" id="dob" placeholder="MM/DD/YYYY" [(ngModel)]="data.dob" name="data.dob" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="mmn" class="col-2 col-form-label"><h5>Mother’s Maiden Name:</h5></label>
+                    <div class="col-3">
+                        <input class="form-control" type="text" id="mmn" [(ngModel)]="data.mmn" name="data.mmn" required>
+                    </div>
+                </div>
+
+               <div id="one"> <font size="5">&nbsp;&nbsp;&nbsp;Other Information</font></div><br>
+
+                <div class="form-group ">
+                    <label for="yesno" class="col-3 col-form-label"><h5>Are you a U.S. Citizen?</h5></label>
+
+                    <div class="col-1">
+                        <label class="checkbox-inline"><input type="radio" value="yes" [(ngModel)]="data.yesno" name="yesno"  checked><b>Yes</b></label>
+                        <label class="checkbox-inline"><input type="radio"  value="no" [(ngModel)]="data.yesno" name="yesno" ><b>No</b></label>
+
+                    </div>
+                </div>
+
+                <div class="form-group row">
+
+                    <label for="employmentstatus" class="col-2 col-form-label"><h5>Employement Status:</h5></label>
+
+                    <div class="col-3">
+
+                        <select id="employmentstatus" class="form-control" [(ngModel)]="data.employmentstatus" name="data.employmentstatus" required>
+  <option selected>Please Select</option>
+  <option value="self-employed">Self-Employed</option>
+  <option value="Employed Full-Time">Employed Full-Time</option>
+  <option value="Homemaker">Homemaker</option>
+  <option value="Other">Other</option>
+  <option value="Employed Part Time">Employed Part Time</option>
+  <option value="Retired">Retired</option>
+  <option value="Student">Student</option>
+  <option value="Unemployed">Unemployed</option>
+</select>
+                    </div>
+                </div>
+
+
+                <fieldset class="form-group" id="save">
+                    <a href="">Cancel&nbsp;&nbsp;&nbsp;</a>
+                    <button  type="submit" class="btn btn-success" routerLinkActive="active">  Continue</button>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div id="menu-bar-container">
+    <div id="menu-bar">
+        <a href="https://www.google.com/maps/@41.5899673,-93.7538157,15z" target="blank">Site Map</a>
+        <a href="">Terms of Use</a>
+        <a href="">Security</a>
+        <a href="">Locations</a>
+        <a href="">Contact US</a>
+        <a href="">Help</a>
+        <div id="contact">Connect with us</div>
+    </div>
+    <div id="fdic"> &nbsp;&nbsp;&#169;&nbsp; 2017 Unity Bank, Member FDIC</div>
+    <div id="norton"><a href="https://support.norton.com/sp/en/us/home/current/info?inid=norton.com_nav_support_products-services%3Anorton-security"
+            target="blank"><img src="https://knowledge.symantec.com/library/VERISIGN/Seal_Symantec_Trans.png" width="100px" height="50px"></a></div>
+    <div id="fd"><a href="https://www.fdic.gov/" target="blank"><img src="https://collinsvillebuildingandloan.com/wp-content/uploads/2015/04/membrFDIC.png" width="100px" height="50px"></a></div>
+
+    <div id="fb"><a href="https://en-gb.facebook.com/login/" target="blank"><img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" width="30px"
+      height="30px"></a></div>
+    <div id="insta"><a href="https://www.instagram.com/?hl=en" target="blank"><img src="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/052016/untitled-1_151.png?itok=5pgkMHV0"
+      width="33px" height="33px"></a></div>
+    <div id="link"><a href="https://www.linkedin.com/" target="blank"><img src="http://1000logos.net/wp-content/uploads/2017/03/LinkedIn-Logo.png" width="30px" height="30px"></a></div>
+    <div id="twitter"><a href="https://twitter.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png"
+      width="30px" height="30px"></a></div>
+    <div id="youtube"><a href="https://www.youtube.com/" target="blank"><img src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" width="30px" height="30px"></a></div>
+
+</div>

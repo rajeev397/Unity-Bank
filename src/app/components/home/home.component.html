@@ -1,0 +1,221 @@
+<style>
+  #image {
+    position: relative;
+    width: 100%;
+  }
+
+  #form {
+    position: absolute;
+    top: 20px;
+    left: 420px;
+    width: 40%;
+  }
+
+  #form0 {
+    position: absolute;
+    top: 20px;
+    left: 390px;
+    width: 100%;
+  }
+
+  #form1 {
+    position: absolute;
+    top: 60px;
+    left: 390px;
+    width: 100%;
+  }
+
+  #form2 {
+    position: absolute;
+    top: 110px;
+    left: 400px;
+    width: 100%;
+  }
+
+  #form3 {
+    position: absolute;
+    top: 150px;
+    left: 400px;
+    width: 100%;
+  }
+
+  #menu-bar-container {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100px;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  #menu-bar {
+    width: 1000px;
+    margin: 0 auto;
+    height: 30px;
+  }
+
+  #menu-bar a {
+    color: black;
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px solid #BB4545;
+    font-size: 13px;
+    position: relative;
+    top: 16px;
+  }
+
+  #menu-bar a:hover {
+    text-decoration: underline;
+  }
+
+  #fdic {
+    color: black;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    top: 23px;
+  }
+
+  #norton {
+    position: relative;
+    top: -30px;
+    float: right;
+    left: -50px;
+  }
+
+  #contact {
+    color: black;
+
+    position: relative;
+    float: right;
+    left: -330px;
+    top: 20px;
+  }
+
+  #fd {
+    position: relative;
+    top: -30px;
+    float: right;
+    left: -95px;
+  }
+
+  #fb {
+    position: relative;
+    top: -7px;
+    float: right;
+    left: -300px;
+  }
+
+  #insta {
+    position: relative;
+    top: -7px;
+    float: right;
+    left: -230px;
+  }
+
+  #link {
+    position: relative;
+    top: -7px;
+    float: right;
+    left: -160px;
+  }
+
+  #twitter {
+    position: relative;
+    top: -7px;
+    float: right;
+    left: -90px;
+  }
+
+  #youtube {
+    position: relative;
+    top: -7px;
+    float: right;
+    left: -20px;
+  }
+ 
+  #aa{
+    position: relative;
+    left:800px;
+  }
+  .navbar{
+    background-color: black;
+  }
+  
+</style>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href=""><font color="white">Unity</font></a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><font color="white">Home </font><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><font color="white">Features</font></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><font color="white">Pricing</font></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">Disabled</a>
+      </li>
+    </ul>
+    <div id="aa">
+    <form>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/register" routerLinkActive="active">Register</button>
+    </form></div>
+  </div>
+</nav>
+<div id="image">
+  <img src="https://www.systemsandservices.co.uk/wp-content/uploads/2014/11/Why-your-company-needs-a-bank-account.jpg" style="width:1365px;height:490px;">
+  <div class="form-group" id="form">
+<form (submit)="getForm1($event)">
+    <div class="form-inline" id="form0">
+      <input class="form-control mr-sm-2" type="text" placeholder="User ID" [(ngModel)]="data.userid" name="data.userid" required>
+      </div>
+    <div class="form-inline" id="form1">
+      <input class="form-control mr-sm-2" type="password" placeholder="Password" [(ngModel)]="data.password" name="data.password" required> 
+      </div>
+    <div  id="form2">
+      <input type="checkbox" checked="checked"> Remember me &nbsp;
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="font-size:9px" ><i style="font-size:15px" class="fa">&#xf23e;</i> Login </button>
+    </div></form>
+    <div id="form3">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="font-size:9px" routerLink="/forgot" routerLinkActive="active">Forgot password </button>
+    </div>
+
+  </div>
+  
+</div>
+
+
+<div class="clear"></div>
+<div id="menu-bar-container">
+  <div id="menu-bar">
+    <a href="https://www.google.com/maps/@41.5899673,-93.7538157,15z">Site Map</a>
+    <a href="">Terms of Use</a>
+    <a href="">Security</a>
+    <a href="">Locations</a>
+    <a href="">Contact US</a>
+    <a href="">Help</a>
+    <div id="contact">Connect with us</div>
+  </div>
+  <div id="fdic"> &nbsp;&nbsp;&#169;&nbsp; 2017 Unity Bank, Member FDIC</div>
+  <div id="norton"><a href="https://support.norton.com/sp/en/us/home/current/info?inid=norton.com_nav_support_products-services%3Anorton-security" target="blank"><img src="https://knowledge.symantec.com/library/VERISIGN/Seal_Symantec_Trans.png" width="100px" height="50px"></a></div>
+  <div id="fd"><a href="https://www.fdic.gov/" target="blank"><img src="https://collinsvillebuildingandloan.com/wp-content/uploads/2015/04/membrFDIC.png" width="100px" height="50px"></a></div>
+  <div id="fb"><a href="https://en-gb.facebook.com/login/" target="blank"><img src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png" width="30px"
+      height="30px"></a></div>
+  <div id="insta"><a href="https://www.instagram.com/?hl=en" target="blank"><img src="https://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/052016/untitled-1_151.png?itok=5pgkMHV0"
+      width="33px" height="33px"></a></div>
+  <div id="link"><a href="https://www.linkedin.com/" target="blank"><img src="http://1000logos.net/wp-content/uploads/2017/03/LinkedIn-Logo.png" width="30px" height="30px"></a></div>
+  <div id="twitter"><a href="https://twitter.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png"
+      width="30px" height="30px"></a></div>
+  <div id="youtube"><a href="https://www.youtube.com/" target="blank"><img src="https://www.youtube.com/yt/brand/media/image/YouTube-icon-full_color.png" width="30px" height="30px"></a></div>
+
+</div>
